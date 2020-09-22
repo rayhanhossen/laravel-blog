@@ -31,7 +31,7 @@
               </h3>
             </a>
             <p class="post-meta">Posted by
-              <a href="#"></a>
+            <a href="#"></a>
               on {{ date('M d, Y', strtotime($post->created_at)) }}
               @if (count($post->categories) > 0)
                 | <span class="post-category">
@@ -44,14 +44,15 @@
               @endif
               
           </p>
-          </div>    
+          </div>
+          <hr>    
         @endforeach
         
         
-        <hr>
+        
         <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        <div class="clearfix mt-4">
+            {{ $posts->links() }}
         </div>
       </div>
       <div class="col-lg-4 col-md-4">

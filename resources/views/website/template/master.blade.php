@@ -38,6 +38,16 @@
     .post-category a{
       text-decoration: none;
     }
+
+    .page-link{
+      color: #00657b;
+      text-align: center;
+    }
+
+    .page-item.active .page-link{
+      border-color: #00657b;
+      background-color: #00657b;
+    }
   </style>
 
 </head>
