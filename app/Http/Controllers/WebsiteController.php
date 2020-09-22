@@ -12,6 +12,7 @@ class WebsiteController extends Controller
     {
         $categories = Category::orderBy('name', 'ASC')->where('is_published', '1')->get();
         $posts = Post::orderBy('id', 'DESC')->where('post_type', 'post')->where('is_published', '1')->paginate(10);
+        
         return view('website.index', compact('posts', 'categories'));
     }
 }
